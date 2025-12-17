@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+  h2 { margin-bottom: 5px; }
+  p { margin-top: 0; color: #666; font-size: 0.9em; }
+
+  /* The Container for all walls */
+  .gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+
+  /* The Wall Box */
+  .wall-sample {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    /* This gradient trick creates the brick pattern */
+    background-image: 
+      linear-gradient(var(--groove-color) 10px, transparent 10px),
+      linear-gradient(90deg, var(--groove-color) 10px, transparent 10px);
+    background-size: 100px 50px; /* Size of the brick + groove */
+    background-color: var(--brick-color);
+    /* Shift background to center the pattern */
+    background-position: -5px -5px; 
+    border-radius: 8px;
+  }
+
+  /* --- COLOR VARIABLES (Edit these to try new colors) --- */
+  
+  /* 1. Golden Hour */
+  .haldi {
+    --brick-color: #FFC107; /* Turmeric Yellow */
+    --groove-color: #E65100; /* Saffron Orange */
+  }
+
+  /* 2. Royal Jaipur */
+  .sandstone {
+    --brick-color: #F4A460; /* Sandy Brown */
+    --groove-color: #800000; /* Maroon */
+  }
+
+  /* 3. Temple White */
+  .kumkum {
+    --brick-color: #FFFFFF; /* White */
+    --groove-color: #D32F2F; /* Red */
+  }
+
+  /* 4. Veda Green */
+  .pista {
+    --brick-color: #C8E6C9; /* Light Green */
+    --groove-color: #1B5E20; /* Dark Green */
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Hindu Wedding Wall Colors</h1>
+
+<div class="gallery">
+  
+  <div>
+    <h2>1. The Haldi Look</h2>
+    <p>Yellow Bricks + Orange Lines</p>
+    <div class="wall-sample haldi"></div>
+  </div>
+
+  <div>
+    <h2>2. The Haveli Look</h2>
+    <p>Sandstone Bricks + Maroon Lines</p>
+    <div class="wall-sample sandstone"></div>
+  </div>
+
+  <div>
+    <h2>3. The Temple Look</h2>
+    <p>White Bricks + Red Lines</p>
+    <div class="wall-sample kumkum"></div>
+  </div>
+
+  <div>
+    <h2>4. The Veda Look</h2>
+    <p>Pista Green + Forest Green Lines</p>
+    <div class="wall-sample pista"></div>
+  </div>
+
+</div>
+
+</body>
+</html>
