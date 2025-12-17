@@ -33,6 +33,11 @@
     color: #d35400;
     border-color: #e67e22;
   }
+  
+  .section-header.exclusive {
+    color: #1a237e;
+    border-color: #5c6bc0;
+  }
 
   /* Grid Layout */
   .gallery { 
@@ -62,6 +67,7 @@
     width: 100%;
     height: 160px;
     border-bottom: 1px solid #e0e0e0;
+    position: relative;
     
     background-image: 
       linear-gradient(var(--groove-color) 8px, transparent 8px),
@@ -71,15 +77,51 @@
     background-color: var(--brick-color);
     background-position: -4px -4px; 
   }
+  
+  /* Gate Overlay for Exclusive Styles */
+  .gate-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 35px;
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 7px,
+      #111 7px,
+      #111 11px
+    );
+    opacity: 0.5;
+    border-left: 3px solid #000;
+  }
 
   .card-content { padding: 15px; text-align: center; }
   h2 { margin: 0 0 5px 0; font-size: 1.1em; color: #2c3e50; }
   p { margin: 0; color: #7f8c8d; font-size: 0.9em; }
   .special-note { font-size: 0.8em; color: #d35400; margin-top: 3px; }
+  
+  .tag { 
+    display: inline-block; 
+    margin-top: 8px; 
+    padding: 3px 10px; 
+    background: #1a237e; 
+    border-radius: 15px; 
+    font-size: 0.75em; 
+    font-weight: bold;
+    color: #fff;
+  }
 
   /* --- COLOR PALETTES --- */
 
-  /* == NEW FAMOUS STYLES (Synergy with Black Gates) == */
+  /* == EXCLUSIVE NEW COLLECTION == */
+  .london { --brick-color: #B94E48; --groove-color: #1a1a1a; }
+  .olive { --brick-color: #708238; --groove-color: #1a1a1a; }
+  .navy { --brick-color: #283593; --groove-color: #E8EAF6; }
+  .pondi { --brick-color: #FBC02D; --groove-color: #FFFFFF; }
+  .greige { --brick-color: #D7CCC8; --groove-color: #FAFAFA; }
+
+  /* == FAMOUS STYLES (Synergy with Black Gates) == */
   .brooklyn-loft { --brick-color: #A55344; --groove-color: #545454; }
   .tudor-brown { --brick-color: #5D4037; --groove-color: #FFF8E1; }
   .modern-farmhouse { --brick-color: #F3E5AB; --groove-color: #A89F91; }
@@ -104,6 +146,237 @@
   .coastal-breeze { --brick-color: #CFD8DC; --groove-color: #FAFAFA; }
   .industrial { --brick-color: #90A4AE; --groove-color: #000000; }
   .espresso { --brick-color: #D7CCC8; --groove-color: #4E342E; }
+
+</style>
+</head>
+<body>
+
+  <h1>Complete Wall Color Catalog</h1>
+  <p class="subtitle">Exclusive collection featuring premium styles perfect with black iron gates, plus festive & modern options</p>
+
+  <div class="gallery">
+
+    <div class="section-header exclusive">Exclusive Premium Collection (Black Gate Synergy)</div>
+
+    <div class="card">
+      <div class="wall-sample london"><div class="gate-overlay"></div></div>
+      <div class="card-content">
+        <h2>1. The London Townhouse</h2>
+        <p>Heritage Red Brick + Black Mortar</p>
+        <span class="tag">Old Famous Style</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample olive"><div class="gate-overlay"></div></div>
+      <div class="card-content">
+        <h2>2. Modern Olive</h2>
+        <p>Sage Green + Charcoal Lines</p>
+        <span class="tag">Trending Now</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample navy"><div class="gate-overlay"></div></div>
+      <div class="card-content">
+        <h2>3. Midnight Blue</h2>
+        <p>Royal Navy + Silver/White Lines</p>
+        <span class="tag">Bold Statement</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample pondi"><div class="gate-overlay"></div></div>
+      <div class="card-content">
+        <h2>4. Pondicherry Yellow</h2>
+        <p>Colonial Ochre + Crisp White Lines</p>
+        <span class="tag">Heritage Classic</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample greige"><div class="gate-overlay"></div></div>
+      <div class="card-content">
+        <h2>5. Greige Farmhouse</h2>
+        <p>Warm Grey-Beige + Soft White Lines</p>
+        <span class="tag">Modern Neutral</span>
+      </div>
+    </div>
+
+    <div class="section-header special">Famous Styles (Perfect with Black Gates)</div>
+
+    <div class="card">
+      <div class="wall-sample brooklyn-loft"></div>
+      <div class="card-content">
+        <h2>6. Brooklyn Loft</h2>
+        <p>Burnt Red + Dark Grey Mortar</p>
+        <p class="special-note">Recent trendy industrial look</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample tudor-brown"></div>
+      <div class="card-content">
+        <h2>7. Tudor Brown</h2>
+        <p>Chocolate Brick + Cream Mortar</p>
+        <p class="special-note">Old famous classic style</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample modern-farmhouse"></div>
+      <div class="card-content">
+        <h2>8. Modern Farmhouse</h2>
+        <p>Limewash Beige + Greige Mortar</p>
+        <p class="special-note">Recent popular soft look</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample midnight-noir"></div>
+      <div class="card-content">
+        <h2>9. Midnight Noir</h2>
+        <p>Charcoal Brick + Black Mortar</p>
+        <p class="special-note">Bold synergy with gate</p>
+      </div>
+    </div>
+
+    <div class="section-header">Wedding & Festive Styles (Auspicious)</div>
+
+    <div class="card">
+      <div class="wall-sample shubh-labh"></div>
+      <div class="card-content">
+        <h2>10. The Shubh-Labh</h2>
+        <p>Red Bricks + Gold Lines</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample haldi"></div>
+      <div class="card-content">
+        <h2>11. The Haldi</h2>
+        <p>Yellow Bricks + Orange Lines</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample surya"></div>
+      <div class="card-content">
+        <h2>12. The Surya</h2>
+        <p>Orange Bricks + Cream Lines</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample gulabi"></div>
+      <div class="card-content">
+        <h2>13. The Gulabi</h2>
+        <p>Rose Pink + White Lines</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample kumkum"></div>
+      <div class="card-content">
+        <h2>14. The Temple</h2>
+        <p>White Bricks + Red Lines</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample ubtan"></div>
+      <div class="card-content">
+        <h2>15. The Ubtan</h2>
+        <p>Mustard + Brown Lines</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample haveli"></div>
+      <div class="card-content">
+        <h2>16. The Haveli</h2>
+        <p>Sandstone + Maroon Lines</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="wall-sample veda"></div>
+      <div class="card-content">
+        <h2>17. The Veda</h2>
+        <p>Pista Green + Forest Green Lines</p>
+      </div>
+    </div>
+
+    <div class="section-header">Modern & General Styles (Everyday)</div>
+
+    <div class="card">
+      <div class="wall-sample urban-slate"></div>
+      <div class="card-content">
+        <h2>18. Urban Slate</h2>
+        <p>Cool Grey + Blue-Grey</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample rustic-terracotta"></div>
+      <div class="card-content">
+        <h2>19. Rustic Terracotta</h2>
+        <p>Terracotta + Sand</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample metro-grey"></div>
+      <div class="card-content">
+        <h2>20. Metro Grey</h2>
+        <p>Light Grey + Charcoal</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample graphic-grid"></div>
+      <div class="card-content">
+        <h2>21. Graphic Grid</h2>
+        <p>Crisp White + Charcoal</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample sand-taupe"></div>
+      <div class="card-content">
+        <h2>22. Sand & Taupe</h2>
+        <p>Creamy Sand + Warm Taupe</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample coastal-breeze"></div>
+      <div class="card-content">
+        <h2>23. Coastal Breeze</h2>
+        <p>Pale Blue-Grey + Off-White</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="wall-sample industrial"></div>
+      <div class="card-content">
+        <h2>24. Industrial</h2>
+        <p>Steel Grey + Black</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample espresso"></div>
+      <div class="card-content">
+        <h2>25. Espresso</h2>
+        <p>Beige + Coffee Brown</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>  .espresso { --brick-color: #D7CCC8; --groove-color: #4E342E; }
 
 </style>
 </head>
