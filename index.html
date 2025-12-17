@@ -18,7 +18,7 @@
   /* Section Headers */
   .section-header {
     width: 100%;
-    grid-column: 1 / -1; /* Span full width of grid */
+    grid-column: 1 / -1;
     border-bottom: 2px solid #b2bec3;
     margin: 50px 0 25px 0;
     padding-bottom: 10px;
@@ -27,8 +27,12 @@
     font-weight: 700;
   }
   
-  /* First header margin adjustment */
   .section-header:first-child { margin-top: 0; }
+  
+  .section-header.special {
+    color: #d35400;
+    border-color: #e67e22;
+  }
 
   /* Grid Layout */
   .gallery { 
@@ -59,7 +63,6 @@
     height: 160px;
     border-bottom: 1px solid #e0e0e0;
     
-    /* PATTERN GENERATION */
     background-image: 
       linear-gradient(var(--groove-color) 8px, transparent 8px),
       linear-gradient(90deg, var(--groove-color) 8px, transparent 8px);
@@ -72,44 +75,89 @@
   .card-content { padding: 15px; text-align: center; }
   h2 { margin: 0 0 5px 0; font-size: 1.1em; color: #2c3e50; }
   p { margin: 0; color: #7f8c8d; font-size: 0.9em; }
+  .special-note { font-size: 0.8em; color: #d35400; margin-top: 3px; }
 
   /* --- COLOR PALETTES --- */
 
-  /* == SECTION 1: WEDDING & FESTIVE == */
-  .shubh-labh { --brick-color: #C62828; --groove-color: #FFD54F; } /* Red + Gold */
-  .haldi { --brick-color: #FFC107; --groove-color: #E65100; } /* Yellow + Orange */
-  .surya { --brick-color: #FF9800; --groove-color: #FFF3E0; } /* Orange + Cream */
-  .gulabi { --brick-color: #FF8A80; --groove-color: #FFFFFF; } /* Pink + White */
-  .kumkum { --brick-color: #FFFFFF; --groove-color: #D32F2F; } /* White + Red */
-  .ubtan { --brick-color: #E1AD01; --groove-color: #5D4037; } /* Mustard + Brown */
-  .haveli { --brick-color: #F4A460; --groove-color: #800000; } /* Sandstone + Maroon */
-  .veda { --brick-color: #C8E6C9; --groove-color: #1B5E20; } /* Pista + Dark Green */
+  /* == NEW FAMOUS STYLES (Synergy with Black Gates) == */
+  .brooklyn-loft { --brick-color: #A55344; --groove-color: #545454; }
+  .tudor-brown { --brick-color: #5D4037; --groove-color: #FFF8E1; }
+  .modern-farmhouse { --brick-color: #F3E5AB; --groove-color: #A89F91; }
+  .midnight-noir { --brick-color: #37474F; --groove-color: #000000; }
 
-  /* == SECTION 2: MODERN & GENERAL == */
-  .urban-slate { --brick-color: #B0BEC5; --groove-color: #546E7A; } /* Cool Grey + Blue-Grey */
-  .rustic-terracotta { --brick-color: #D87D5D; --groove-color: #EBD3B5; } /* Terracotta + Sand */
-  .graphic-grid { --brick-color: #FFFFFF; --groove-color: #212121; } /* White + Charcoal */
-  .metro-grey { --brick-color: #ECEFF1; --groove-color: #263238; } /* Light Grey + Charcoal */
-  .sand-taupe { --brick-color: #F1E4C8; --groove-color: #8D7C66; } /* Sand + Taupe */
-  .coastal-breeze { --brick-color: #CFD8DC; --groove-color: #FAFAFA; } /* Pale Blue + Off-White */
-  .industrial { --brick-color: #90A4AE; --groove-color: #000000; } /* Steel Grey + Black */
-  .espresso { --brick-color: #D7CCC8; --groove-color: #4E342E; } /* Beige + Coffee */
+  /* == WEDDING & FESTIVE STYLES == */
+  .shubh-labh { --brick-color: #C62828; --groove-color: #FFD54F; }
+  .haldi { --brick-color: #FFC107; --groove-color: #E65100; }
+  .surya { --brick-color: #FF9800; --groove-color: #FFF3E0; }
+  .gulabi { --brick-color: #FF8A80; --groove-color: #FFFFFF; }
+  .kumkum { --brick-color: #FFFFFF; --groove-color: #D32F2F; }
+  .ubtan { --brick-color: #E1AD01; --groove-color: #5D4037; }
+  .haveli { --brick-color: #F4A460; --groove-color: #800000; }
+  .veda { --brick-color: #C8E6C9; --groove-color: #1B5E20; }
+
+  /* == MODERN & GENERAL STYLES == */
+  .urban-slate { --brick-color: #B0BEC5; --groove-color: #546E7A; }
+  .rustic-terracotta { --brick-color: #D87D5D; --groove-color: #EBD3B5; }
+  .graphic-grid { --brick-color: #FFFFFF; --groove-color: #212121; }
+  .metro-grey { --brick-color: #ECEFF1; --groove-color: #263238; }
+  .sand-taupe { --brick-color: #F1E4C8; --groove-color: #8D7C66; }
+  .coastal-breeze { --brick-color: #CFD8DC; --groove-color: #FAFAFA; }
+  .industrial { --brick-color: #90A4AE; --groove-color: #000000; }
+  .espresso { --brick-color: #D7CCC8; --groove-color: #4E342E; }
 
 </style>
 </head>
 <body>
 
   <h1>Complete Wall Color Catalog</h1>
-  <p class="subtitle">A collection of Festive & Modern styles for your home</p>
+  <p class="subtitle">Updated collection featuring famous styles perfect with black gates, plus festive & modern options</p>
 
   <div class="gallery">
+
+    <div class="section-header special">Famous Styles (Perfect with Black Gates)</div>
+
+    <div class="card">
+      <div class="wall-sample brooklyn-loft"></div>
+      <div class="card-content">
+        <h2>1. Brooklyn Loft</h2>
+        <p>Burnt Red + Dark Grey Mortar</p>
+        <p class="special-note">Recent trendy industrial look</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample tudor-brown"></div>
+      <div class="card-content">
+        <h2>2. Tudor Brown</h2>
+        <p>Chocolate Brick + Cream Mortar</p>
+        <p class="special-note">Old famous classic style</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample modern-farmhouse"></div>
+      <div class="card-content">
+        <h2>3. Modern Farmhouse</h2>
+        <p>Limewash Beige + Greige Mortar</p>
+        <p class="special-note">Recent popular soft look</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="wall-sample midnight-noir"></div>
+      <div class="card-content">
+        <h2>4. Midnight Noir</h2>
+        <p>Charcoal Brick + Black Mortar</p>
+        <p class="special-note">Bold synergy with gate</p>
+      </div>
+    </div>
 
     <div class="section-header">Wedding & Festive Styles (Auspicious)</div>
 
     <div class="card">
       <div class="wall-sample shubh-labh"></div>
       <div class="card-content">
-        <h2>1. The Shubh-Labh</h2>
+        <h2>5. The Shubh-Labh</h2>
         <p>Red Bricks + Gold Lines</p>
       </div>
     </div>
@@ -117,7 +165,7 @@
     <div class="card">
       <div class="wall-sample haldi"></div>
       <div class="card-content">
-        <h2>2. The Haldi</h2>
+        <h2>6. The Haldi</h2>
         <p>Yellow Bricks + Orange Lines</p>
       </div>
     </div>
@@ -125,7 +173,7 @@
     <div class="card">
       <div class="wall-sample surya"></div>
       <div class="card-content">
-        <h2>3. The Surya</h2>
+        <h2>7. The Surya</h2>
         <p>Orange Bricks + Cream Lines</p>
       </div>
     </div>
@@ -133,7 +181,7 @@
     <div class="card">
       <div class="wall-sample gulabi"></div>
       <div class="card-content">
-        <h2>4. The Gulabi</h2>
+        <h2>8. The Gulabi</h2>
         <p>Rose Pink + White Lines</p>
       </div>
     </div>
@@ -141,7 +189,7 @@
     <div class="card">
       <div class="wall-sample kumkum"></div>
       <div class="card-content">
-        <h2>5. The Temple</h2>
+        <h2>9. The Temple</h2>
         <p>White Bricks + Red Lines</p>
       </div>
     </div>
@@ -149,7 +197,7 @@
     <div class="card">
       <div class="wall-sample ubtan"></div>
       <div class="card-content">
-        <h2>6. The Ubtan</h2>
+        <h2>10. The Ubtan</h2>
         <p>Mustard + Brown Lines</p>
       </div>
     </div>
@@ -157,7 +205,7 @@
     <div class="card">
       <div class="wall-sample haveli"></div>
       <div class="card-content">
-        <h2>7. The Haveli</h2>
+        <h2>11. The Haveli</h2>
         <p>Sandstone + Maroon Lines</p>
       </div>
     </div>
@@ -165,7 +213,7 @@
     <div class="card">
       <div class="wall-sample veda"></div>
       <div class="card-content">
-        <h2>8. The Veda</h2>
+        <h2>12. The Veda</h2>
         <p>Pista Green + Forest Green Lines</p>
       </div>
     </div>
@@ -175,7 +223,7 @@
     <div class="card">
       <div class="wall-sample urban-slate"></div>
       <div class="card-content">
-        <h2>9. Urban Slate</h2>
+        <h2>13. Urban Slate</h2>
         <p>Cool Grey + Blue-Grey</p>
       </div>
     </div>
@@ -183,7 +231,7 @@
     <div class="card">
       <div class="wall-sample rustic-terracotta"></div>
       <div class="card-content">
-        <h2>10. Rustic Terracotta</h2>
+        <h2>14. Rustic Terracotta</h2>
         <p>Terracotta + Sand</p>
       </div>
     </div>
@@ -191,7 +239,7 @@
     <div class="card">
       <div class="wall-sample metro-grey"></div>
       <div class="card-content">
-        <h2>11. Metro Grey</h2>
+        <h2>15. Metro Grey</h2>
         <p>Light Grey + Charcoal</p>
       </div>
     </div>
@@ -199,7 +247,7 @@
     <div class="card">
       <div class="wall-sample graphic-grid"></div>
       <div class="card-content">
-        <h2>12. Graphic Grid</h2>
+        <h2>16. Graphic Grid</h2>
         <p>Crisp White + Charcoal</p>
       </div>
     </div>
@@ -207,7 +255,7 @@
     <div class="card">
       <div class="wall-sample sand-taupe"></div>
       <div class="card-content">
-        <h2>13. Sand & Taupe</h2>
+        <h2>17. Sand & Taupe</h2>
         <p>Creamy Sand + Warm Taupe</p>
       </div>
     </div>
@@ -215,7 +263,7 @@
     <div class="card">
       <div class="wall-sample coastal-breeze"></div>
       <div class="card-content">
-        <h2>14. Coastal Breeze</h2>
+        <h2>18. Coastal Breeze</h2>
         <p>Pale Blue-Grey + Off-White</p>
       </div>
     </div>
@@ -223,7 +271,7 @@
     <div class="card">
       <div class="wall-sample industrial"></div>
       <div class="card-content">
-        <h2>15. Industrial</h2>
+        <h2>19. Industrial</h2>
         <p>Steel Grey + Black</p>
       </div>
     </div>
@@ -231,62 +279,12 @@
     <div class="card">
       <div class="wall-sample espresso"></div>
       <div class="card-content">
-        <h2>16. Espresso</h2>
+        <h2>20. Espresso</h2>
         <p>Beige + Coffee Brown</p>
       </div>
     </div>
 
   </div>
-
-</body>
-</html>
-
-  <div class="card">
-    <h2>2. Industrial</h2>
-    <p>Steel Grey Bricks + Black Lines</p>
-    <div class="wall-sample industrial"></div>
-  </div>
-
-  <div class="card">
-    <h2>3. Minimalist</h2>
-    <p>White Bricks + Silver Lines</p>
-    <div class="wall-sample minimalist"></div>
-  </div>
-
-  <div class="card">
-    <h2>4. Coffee & Cream</h2>
-    <p>Beige Bricks + Espresso Lines</p>
-    <div class="wall-sample espresso"></div>
-  </div>
-
-
-  <div style="grid-column: 1 / -1;"><div class="section-title">Wedding & Festive Styles (Auspicious)</div></div>
-
-  <div class="card">
-    <h2>5. The Shubh-Labh</h2>
-    <p>Red Bricks + Gold Lines</p>
-    <div class="wall-sample shubh-labh"></div>
-  </div>
-
-  <div class="card">
-    <h2>6. The Haldi</h2>
-    <p>Yellow Bricks + Orange Lines</p>
-    <div class="wall-sample haldi"></div>
-  </div>
-
-  <div class="card">
-    <h2>7. The Gulabi</h2>
-    <p>Rose Pink + White Lines</p>
-    <div class="wall-sample gulabi"></div>
-  </div>
-
-  <div class="card">
-    <h2>8. The Surya</h2>
-    <p>Orange Bricks + Cream Lines</p>
-    <div class="wall-sample surya"></div>
-  </div>
-
-</div>
 
 </body>
 </html>
