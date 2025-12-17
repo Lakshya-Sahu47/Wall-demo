@@ -1,87 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Complete Wall Color Simulator</title>
 <style>
-  body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
-  h2 { margin-bottom: 5px; }
-  p { margin-top: 0; color: #666; font-size: 0.9em; }
-
-  /* The Container for all walls */
-  .gallery { display: flex; flex-wrap: wrap; gap: 20px; }
-
-  /* The Wall Box */
-  .wall-sample {
-    width: 200px;
-    height: 150px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    /* This gradient trick creates the brick pattern */
-    background-image: 
-      linear-gradient(var(--groove-color) 10px, transparent 10px),
-      linear-gradient(90deg, var(--groove-color) 10px, transparent 10px);
-    background-size: 100px 50px; /* Size of the brick + groove */
-    background-color: var(--brick-color);
-    /* Shift background to center the pattern */
-    background-position: -5px -5px; 
-    border-radius: 8px;
-  }
-
-  /* --- COLOR VARIABLES (Edit these to try new colors) --- */
+  body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #e0e0e0; }
+  h1 { text-align: center; color: #333; margin-bottom: 40px;}
   
-  /* 1. Golden Hour */
-  .haldi {
-    --brick-color: #FFC107; /* Turmeric Yellow */
-    --groove-color: #E65100; /* Saffron Orange */
+  /* Section Headers */
+  .section-title {
+    width: 100%;
+    border-bottom: 2px solid #aaa;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    color: #444;
+    font-size: 1.4em;
+    font-weight: bold;
   }
 
-  /* 2. Royal Jaipur */
-  .sandstone {
-    --brick-color: #F4A460; /* Sandy Brown */
-    --groove-color: #800000; /* Maroon */
+  /* Grid Layout */
+  .gallery { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 25px; 
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
-  /* 3. Temple White */
-  .kumkum {
-    --brick-color: #FFFFFF; /* White */
-    --groove-color: #D32F2F; /* Red */
+  /* The Wall Box Visualizer */
+  .wall-sample {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #bbb;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    
+    /* THE MAGIC: CSS Gradients to create the brick pattern */
+    background-image: 
+      linear-gradient(var(--groove-color) 8px, transparent 8px),
+      linear-gradient(90deg, var(--groove-color) 8px, transparent 8px);
+    
+    background-size: 100px 50px; 
+    background-color: var(--brick-color);
+    background-position: -4px -4px; 
+    border-radius: 6px;
+    margin-top: 10px;
   }
 
-  /* 4. Veda Green */
-  .pista {
-    --brick-color: #C8E6C9; /* Light Green */
-    --groove-color: #1B5E20; /* Dark Green */
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
   }
+  .card:hover { transform: translateY(-5px); }
+  
+  h2 { margin: 0; font-size: 1.1em; color: #333; }
+  p { margin: 5px 0 0 0; color: #666; font-size: 0.85em; }
+
+  /* --- 1. MODERN & GENERAL PALETTES --- */
+  
+  /* The "Metro" - Very popular modern look */
+  .metro-grey { --brick-color: #ECEFF1; --groove-color: #263238; } /* Light Grey + Dark Charcoal */
+  
+  /* The "Industrial" - Bold and masculine */
+  .industrial { --brick-color: #90A4AE; --groove-color: #000000; } /* Med Grey + Black */
+  
+  /* The "Minimalist" - Clean and airy */
+  .minimalist { --brick-color: #FFFFFF; --groove-color: #9E9E9E; } /* White + Light Grey */
+  
+  /* The "Espresso" - Warm neutral */
+  .espresso { --brick-color: #D7CCC8; --groove-color: #4E342E; } /* Beige + Dark Brown */
+
+  /* --- 2. WEDDING & FESTIVE PALETTES --- */
+  
+  /* The "Shubh-Labh" - Red & Gold */
+  .shubh-labh { --brick-color: #C62828; --groove-color: #FFD54F; } 
+  
+  /* The "Haldi" - Yellow & Orange */
+  .haldi { --brick-color: #FFC107; --groove-color: #E65100; } 
+  
+  /* The "Gulabi" - Pink & White */
+  .gulabi { --brick-color: #FF8A80; --groove-color: #FFFFFF; } 
+  
+  /* The "Temple" - Orange & Cream */
+  .surya { --brick-color: #FF9800; --groove-color: #FFF3E0; } 
 
 </style>
 </head>
 <body>
 
-<h1>Hindu Wedding Wall Colors</h1>
+<h1>Wall Color Visualizer</h1>
 
 <div class="gallery">
   
-  <div>
-    <h2>1. The Haldi Look</h2>
+  <div style="grid-column: 1 / -1;"><div class="section-title">Modern & General Styles (Long-term use)</div></div>
+
+  <div class="card">
+    <h2>1. Metro Grey</h2>
+    <p>Light Grey Bricks + Charcoal Lines</p>
+    <div class="wall-sample metro-grey"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Industrial</h2>
+    <p>Steel Grey Bricks + Black Lines</p>
+    <div class="wall-sample industrial"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Minimalist</h2>
+    <p>White Bricks + Silver Lines</p>
+    <div class="wall-sample minimalist"></div>
+  </div>
+
+  <div class="card">
+    <h2>4. Coffee & Cream</h2>
+    <p>Beige Bricks + Espresso Lines</p>
+    <div class="wall-sample espresso"></div>
+  </div>
+
+
+  <div style="grid-column: 1 / -1;"><div class="section-title">Wedding & Festive Styles (Auspicious)</div></div>
+
+  <div class="card">
+    <h2>5. The Shubh-Labh</h2>
+    <p>Red Bricks + Gold Lines</p>
+    <div class="wall-sample shubh-labh"></div>
+  </div>
+
+  <div class="card">
+    <h2>6. The Haldi</h2>
     <p>Yellow Bricks + Orange Lines</p>
     <div class="wall-sample haldi"></div>
   </div>
 
-  <div>
-    <h2>2. The Haveli Look</h2>
-    <p>Sandstone Bricks + Maroon Lines</p>
-    <div class="wall-sample sandstone"></div>
+  <div class="card">
+    <h2>7. The Gulabi</h2>
+    <p>Rose Pink + White Lines</p>
+    <div class="wall-sample gulabi"></div>
   </div>
 
-  <div>
-    <h2>3. The Temple Look</h2>
-    <p>White Bricks + Red Lines</p>
-    <div class="wall-sample kumkum"></div>
-  </div>
-
-  <div>
-    <h2>4. The Veda Look</h2>
-    <p>Pista Green + Forest Green Lines</p>
-    <div class="wall-sample pista"></div>
+  <div class="card">
+    <h2>8. The Surya</h2>
+    <p>Orange Bricks + Cream Lines</p>
+    <div class="wall-sample surya"></div>
   </div>
 
 </div>
